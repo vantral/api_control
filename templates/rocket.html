@@ -1,0 +1,16 @@
+{% extends 'base.html' %} {% block content %}
+    <div class="container" style="width: 60%;margin: auto;margin-top: 10em;">
+        <form action="/rocket/api/instruction" target="_blank" style="text-align: center;" autocomplete="off" method="POST">
+            <p>
+                <label for="name">Введите имя</label>
+                <input name="name" type="text">
+            </p>
+            <p>
+                <label for="surname">Введите фамилию</label>
+                <input name="surname" type="text">
+            </p>
+            
+            <button class="btn btn-primary">ПОЛУЧИТЬ КЛЮЧ</button>
+        </form>
+    </div>
+{% endblock %}

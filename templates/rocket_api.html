@@ -1,0 +1,30 @@
+{% extends 'base.html' %} {% block content %}
+    <div class="container" style="width: 60%;margin: auto;margin-top: 8em;font-size:16pt;">
+        ВАШ КЛЮЧ: <code>{{ key }}</code>
+
+        <p>
+            Этот сервис позволяет получать некачественные картинки жабок.
+            Для того, чтобы получить картинку жабки, нужно сформировать правильный запрос.
+        </p>
+        <p>
+            Пример запроса:
+            <code>
+                https://abrakadabra.pythonanywhere.com/rocket/api?apikey=DEMO_KEY
+            </code>
+        </p>
+        <p>
+            API принимает следующие параметры:
+            <ul>
+                <li><code>count</code> &mdash; число от 1 до 254, количество картинок</li>
+                <li><code>format</code> &mdash; <b>json</b> или <b>img</b>, форматы выдачи, если <code>count</code> равен 1. Если <b>json</b>, то выдача в формате JSON, иначе &mdash; просто сама картинка.</li>
+            </ul>
+        </p>
+        <p>
+            <h2>Ваша цель</h2>
+            <ul>
+                <li>Сформировать такой запрос, чтобы получить одну картинку (не в формате JSON)</li>
+                <li>Сформировать такой запрос, чтобы получить 20 картинок в формате JSON</li>
+            </ul>
+        </p>
+    </div>
+{% endblock %}
